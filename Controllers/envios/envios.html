@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Envios</title>
+
+</head>
+<body>
+<p>Cotizas Envios</p>
+<form method="POST">
+    <label>DEPTH</label><input type="text" name="de" id="de">
+    <label>width</label><input type="text" name="wi" id="wi">
+    <label>height</label><input type="text" name="he" id="he">
+    <label>weight</label><input type="text" name="we" id="we">
+    <label>C.P origin</label><input type="text" name="ori" id="ori">
+    <label>C.P destination</label><input type="text" name="des" id="des">
+    <input type="button" name="enviar" id="enviar" value="Enviar">
+</form>
+
+<div id="tbodyProducto"></div>
+
+<script type="text/javascript" src="../../Assets/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+    $("#enviar").click(function(e) {
+        e.preventDefault();
+    var de = $("#de").val(),
+    wi = $("#wi").val(),
+    he = $("#he").val(),
+    we = $("#we").val(),
+    ori = $("#ori").val(),
+    des = $("#des").val(),
+
+    //"nombre del parámetro POST":valor (el cual es el objeto guardado en las variables de arriba)
+    datos = {"de":de, "wi":wi,"he":he,"we":we,"ori":ori,"des":des};
+        $.ajax({
+        url: "cotizacion.php",
+        type: "POST",
+        data: datos,
+        dataType : 'json'
+    }).done(function(respuesta){
+        console.log(respuesta);
+        
+        var valor = '<tr>' +
+        '<td>' + respuesta.title + '</td>' +
+        '<td>' + respuesta.packageSize + '</td>' +
+        '<td>' + respuesta.cost + '</td>' +
+        
+        '<td><button class="btn btn-danger fa fa-trash"></button>&nbsp;&nbsp;<button class="btn btn-warning fa fa-pencil"></button></td>' +
+        '</tr>';
+      $("#tbodyProducto").html(valor);
+                 
+                
+            
+        
+    });    
+    });
+    
+</script>
+</body>
+</html>
