@@ -14,10 +14,11 @@ $correo = $_POST['email'];
 $telefono = $_POST['tel'];
 $comentario = $_POST['msg'];*/
 
-$nombres = $_POST["nombres"];
-$email = $_POST["email"];
-$asunto = $_POST["asunto"];
-$descripcion = $_POST["descripcion"];
+$nombres = $_POST["nombre"];
+$app = $_POST["app"];
+$apm = $_POST["apm"];
+$dom = $_POST["dom"];
+$prop = $_POST["prop"];
 
 // Inicio
     $mail = new PHPMailer(true);
@@ -51,23 +52,24 @@ $descripcion = $_POST["descripcion"];
                 
                     <p style="margin: 2px; font-size: 15px">
                         <br>
-                        <h2 style="color: #fff; margin: 0 0 7px" align="center">'.'FORMULARIO DE CONTACTO'.'</h2>
+                        <h2 style="color: #fff; margin: 0 0 7px" align="center">'.'Quiero ser un distribuidor'.'</h2>
                         </p>
                         <p>
                         De:  
                         <br>
                         <br>
                         <br>
-                        <h2 style="color: #fff; margin: 0 0 5px" align="center">'.$nombres.'</h2>
-                        <h2 style="color: #fff; margin: 0 0 5px" align="center">'.$email.'</h2>
+                        <h2 style="color: #fff; margin: 0 0 5px" align="center">'.$nombres.' '.$app.' '.$apm.'</h2>
+                        Mi domicilio es:   
+                        <h2 style="color: #fff; margin: 0 0 5px" align="center">'.$dom.'</h2>
                         
                         </p>
                         <p>
-                        El motivo es:   
+                        Mi propuesta es:   
                         <br>
                         <br>
                         <br>
-                        <h2 style="color: #fff; margin: 0 0 5px" align="center">'.$asunto.'</h2>
+                        <h2 style="color: #fff; margin: 0 0 5px" align="center">'.$prop.'</h2>
                         
                         </p>
                     </p>		

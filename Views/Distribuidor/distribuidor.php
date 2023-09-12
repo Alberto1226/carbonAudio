@@ -8,7 +8,7 @@ headerTienda($data);
       <div class="row">
         <div class="col-sm">
         <h2 style="padding:2vw; font-size:20px;">¿QUIERES SER DISTRIBUIDOR?</h2>
-          <form>
+          <form  id="miFormulario2" method="POST" enctype="multipart/form-data"> 
             <div class="form-group">
               
               <input type="text" class="form-control" id="nombre" name="nombre" placeholder="NOMBRES:">
@@ -32,7 +32,7 @@ headerTienda($data);
             <div class="form-group">
               <textarea class="form-control" aria-label="With textarea" id="prop" name="prop" placeholder="TE ESCUCHAMOS…."></textarea>
             </div>
-            <button type="button" class="form-control btn btn-success btnEnviar">Enviar</button>
+            <button type="submit" class="form-control btn btn-success btnEnviar2">Enviar</button>
           </form>
         </div>
         <div class="col-sm">
@@ -44,61 +44,43 @@ headerTienda($data);
         </div>
       </div>
     </div>
-<script>
-	$(document).ready(function () {
-    $(".btnEnviar").click(function () {
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+    $("#miFormulario2").submit(function (e) {
+        e.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
         // Obtener los valores del formulario
         var nombres = $("#nombre").val();
-        var apellidoPaterno = $("#app").val();
-        var apellidoMaterno = $("#apm").val();
-        var domicilioNegocio = $("#dom").val();
-        var descripcion = $("#prop").val();
+        var app = $("#app").val();
+        var apm = $("#apm").val();
+        var dom = $("#dom").val();
+        var prop = $("#prop").val();
 
         // Validar que todos los campos estén llenos
-        if (nombres === '' || apellidoPaterno === '' || apellidoMaterno === '' || domicilioNegocio === '' || descripcion === '') {
+        if (nombres === '' || app === '' || apm === '' || dom === '' || prop === '') {
             alert("Por favor, complete todos los campos antes de enviar el formulario.");
             return;
         }
-
-        // Obtener la referencia al elemento de entrada de archivos
-        var fileInput = document.getElementById('files');
-        var files = fileInput.files;
-
-        // Verificar si se seleccionaron archivos
-        if (files.length === 0) {
-            alert("Por favor, seleccione al menos una imagen antes de enviar el formulario.");
-            return;
-        }
-
-        // Crear un objeto FormData para enviar archivos
-        var formData = new FormData();
-
-        // Agregar archivos al objeto FormData
-        for (var i = 0; i < files.length; i++) {
-            formData.append('files[]', files[i]);
-        }
-
-        // Agregar otros datos al objeto FormData
-        formData.append('nombre', nombres);
-        formData.append('app', apellidoPaterno);
-        formData.append('apm', apellidoMaterno);
-        formData.append('dom', domicilioNegocio);
-        formData.append('prop', descripcion);
 
         // Realizar la solicitud AJAX
         $.ajax({
             type: "POST",
             url: "<?= base_url().'/Views/Contacto/email/enviar2.php'?>", // Cambia esto por la ubicación de tu script PHP
-            data: formData,
-            contentType: false,
-            processData: false,
+            data: {
+                nombres: nombres,
+                app: app,
+                apm: apm,
+                dom: dom,
+                prop: prop
+            },
             success: function (response) {
-                // Mostrar la respuesta en el div resultado o realizar cualquier otra acción que desees
-                // $("#resultado").html(response);
-                console.log(response);
+                // Mostrar la respuesta en el div resultado
+                $("#resultado").html(response);
+                //console.log(response);
                 alert("Envío exitoso");
                 // Limpiar el formulario después del envío
-                $("form")[0].reset();
+                $("#miFormulario2")[0].reset();
             },
             error: function (error) {
                 // Manejar errores si es necesario
@@ -109,8 +91,7 @@ headerTienda($data);
     });
 });
 
-
-</script>
+    </script>
    
 <?php 
 	footerTienda($data);

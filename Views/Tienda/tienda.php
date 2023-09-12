@@ -47,7 +47,11 @@ $arrProductos = $data['productos'];
 					</div>
 				</div>
 			</div>
+			<div class="btnCatalogos">
+			<button class="btnCat"><a href="<?= base_url().'/Assets/cba/catalogo2023.pdf'?>"> <img src="<?= base_url().'/Assets/cba/boton1.png'?>" alt="" class="imgbuttonpdf"> </a></button>
+			<button class="btnCat"><a href="<?= base_url().'/Assets/cba/CATALOGOSCANALTEK2023DIGITAL.pdf'?>"><img src="<?= base_url().'/Assets/cba/boton2.png'?>" alt="" class="imgbuttonpdf"></a></button>
 
+			</div>
 			<div class="row isotope-grid">
 			<?php
 			if(count($arrProductos) > 0 ){ 
@@ -95,7 +99,7 @@ $arrProductos = $data['productos'];
 			 ?>
 			 <p>No hay productos para mostrar <a href="<?= base_url() ?>/tienda"> Ver productos</a></p>
 			<?php } ?>
-
+			
 			</div>
 
 			<!-- Load more -->

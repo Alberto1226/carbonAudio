@@ -272,7 +272,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .wrap-menu-desktop {
   position: fixed;
   z-index: 1100;
-  background-image: radial-gradient(circle at 0% 0%, #00ffff 0, #00dbff 25%, #11b1ee 50%, #2c89b9 75%, #2f6689 100%);
+  /*background-image: radial-gradient(circle at 0% 0%, #00ffff 0, #00dbff 25%, #11b1ee 50%, #2c89b9 75%, #2f6689 100%);*/
+  background-color: white;
   width: 100%;
   height: 84px;
   top: 40px;
@@ -285,7 +286,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 .header-v2 .wrap-menu-desktop {
-  background-image: radial-gradient(circle at 0% 0%, #00ffff 0, #00dbff 25%, #11b1ee 50%, #2c89b9 75%, #2f6689 100%);
+  /*background-image: radial-gradient(circle at 0% 0%, #00ffff 0, #00dbff 25%, #11b1ee 50%, #2c89b9 75%, #2f6689 100%);*/
+  background-color: white;
   top: 0;
 }
 
@@ -309,7 +311,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  background-image: radial-gradient(circle at 0% 0%, #00ffff 0, #00dbff 25%, #11b1ee 50%, #2c89b9 75%, #2f6689 100%);
+  /*background-image: radial-gradient(circle at 0% 0%, #00ffff 0, #00dbff 25%, #11b1ee 50%, #2c89b9 75%, #2f6689 100%);*/
+  background-color: white;
 }
 
 
@@ -440,7 +443,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 /*---------------------------------------------*/
 .main-menu > li:hover > a {
   text-decoration: none;
-  color: #ffffff;
+  color: #488cc7;
 }
 
 .main-menu > li:hover > .sub-menu {
@@ -3571,7 +3574,7 @@ p {
 .parrafoCarbn{
   text-align: justify;
   font-size: 17px;
-  text-shadow: 2px 2px 9px #29B1CE;
+  text-shadow: 2px 2px 9px #2561a5;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
@@ -3582,7 +3585,13 @@ a, p, h1,h2, h3, h4, h5, h5, label, div{
 
 /*distribuidor*/
 .btnEnviar{
-  background-image: radial-gradient(circle at 0% 0%, #00ffff 0, #00dbff 25%, #11b1ee 50%, #2c89b9 75%, #2f6689 100%);
+  /*background-image: radial-gradient(circle at 0% 0%, #00ffff 0, #00dbff 25%, #11b1ee 50%, #2c89b9 75%, #2f6689 100%);*/
+  background-color: #1157A0;
+}
+
+.btnEnviar2{
+  /*background-image: radial-gradient(circle at 0% 0%, #00ffff 0, #00dbff 25%, #11b1ee 50%, #2c89b9 75%, #2f6689 100%);*/
+  background-color: #1157A0;
 }
 
 /* Estilos para el botón de WhatsApp */
@@ -3615,7 +3624,7 @@ a, p, h1,h2, h3, h4, h5, h5, label, div{
   padding: 10px 15px 10px 15px;
   margin: 5px;
   background-color: white;
-  color: #00dbff;
+  color: #1157A0;
   border-radius: 50px; /* Establecer un valor fijo para hacerlo completamente redondo */
   font-size: 20px;
   list-style: none;
@@ -3636,8 +3645,8 @@ a, p, h1,h2, h3, h4, h5, h5, label, div{
 
 
 .imgLogoDis{
-width: 30vw;
-height: 8vw;
+width: 35vw;
+height: 17vw;
 }
 
 .condis{
@@ -3658,3 +3667,56 @@ height: 8vw;
     background-position: center; /* Centra la imagen en el div */
 }
 
+
+.imgBaner{
+  width: 90%;
+  align-items: center;
+  text-align: center;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  
+}
+
+
+.banerhome{
+  align-items: center;
+  text-align: center;
+}
+
+
+.btnCatalogos{
+ 
+  align-items: right;
+  text-align: right;
+}
+.btnCat{
+  padding: 1vw;
+  color: white;
+  background-color: #000000;
+  border-radius: 1vw;
+  margin: 0.5vw;
+  transition: transform 0.3s;
+  color: white;
+}
+
+.btnCat:hover{
+  background-color: transparent;
+  transform: scale(1.2);
+  padding: 1vw;
+  border-radius: 1vw;
+  margin: 0.5vw;
+}
+
+
+.imgbuttonpdf{
+  width: 10vw;
+  height: 3vw;
+  border-radius: 1vw;
+}
+
+.imgfooterContacto{
+  width: 100%;
+  margin-top: 2vw;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}

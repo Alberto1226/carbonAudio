@@ -76,7 +76,7 @@ $idpagina = $data['page']['idpost'];
 
     </script>
 </section>	
-
+<img src="<?= base_url().'/Assets/cba/ubicaciones.png'?>" alt="" class="imgfooterContacto">
 <?php 
 	
 	footerTienda($data);

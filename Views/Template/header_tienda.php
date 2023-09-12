@@ -111,7 +111,7 @@
 
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m trans-04 p-lr-25" data-toggle="modal" data-target="#modalAyuda" >
-							Help & FAQs
+							Politicas de Privacidad
 						</a>
 						<?php 
 							if(isset($_SESSION['login'])){
@@ -154,9 +154,9 @@
 							<li>
 								<a href="<?= base_url(); ?>/distribuidor">¿QUIERES SER DISTRIBUIDOR?</a>
 							</li>
-							<li>
+							<!--<li>
 								<a href="<?= base_url(); ?>/sucursales">SUCURSALES</a>
-							</li>
+							</li>-->
 							<li>
 								<a href="<?= base_url(); ?>/contacto">CONTACTO</a>
 							</li>
@@ -229,7 +229,7 @@
 				<li>
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m p-lr-10 trans-04" data-toggle="modal" data-target="#modalAyuda">
-							Help & FAQs
+							Politicas de Privacidad
 						</a>
 						<?php 
 							if(isset($_SESSION['login'])){
@@ -253,29 +253,30 @@
 			</ul>
 
 			<ul class="main-menu-m">
-				<li>
-					<a href="<?= base_url(); ?>">Inicio</a>
-				</li>
-
-				<li>
-					<a href="<?= base_url(); ?>/tienda">Tienda</a>
-				</li>
-
-				<li>
-					<a href="<?= base_url(); ?>/carrito">Carrito</a>
-				</li>
-
-				<li>
-					<a href="<?= base_url(); ?>/nosotros">Nosotros</a>
-				</li>
-
-				<li>
-					<a href="<?= base_url(); ?>/sucursales">Sucursales</a>
-				</li>
-
-				<li>
-					<a href="<?= base_url(); ?>/contacto">Contacto</a>
-				</li>
+							<li>
+								<a href="<?= base_url(); ?>">INICIO</a>
+							</li>
+							<li>
+								<a href="<?= base_url(); ?>/tienda">PRODUCTOS</a>
+							</li>
+							<li>
+								<a href="<?= base_url(); ?>/distribuidor">¿QUIERES SER DISTRIBUIDOR?</a>
+							</li>
+							<!--<li>
+								<a href="<?= base_url(); ?>/sucursales">SUCURSALES</a>
+							</li>-->
+							<li>
+								<a href="<?= base_url(); ?>/contacto">CONTACTO</a>
+							</li>
+							<!--<li>
+								<a href="<?= base_url(); ?>/nosotros">NOSOTROS</a>
+							</li>
+							<li>
+								<a href="<?= base_url(); ?>/carrito">CARRITO</a>
+							</li>
+							<li>
+								<a href="<?= base_url(); ?>/apps">DESCARGAS</a>
+							</li>-->
 			</ul>
 		</div>
 
